@@ -1,2 +1,2 @@
 # iocage-plugin-bind
-jailed bind compatible with freenas plugins
+Artifact file(s) for Bind9 iocage plugin
