@@ -14,13 +14,13 @@ echo "// " >> /usr/local/etc/namedb/zones.register
 echo "// sample:" >> /usr/local/etc/namedb/zones.register
 echo "// zone \"example.local\" \t{ type master; file \"/usr/local/namedb/dynamic/example.local.db\"; };" >> /usr/local/etc/namedb/zones.register
 
-touch /usr/local/namedb/dynamic/example.local.db
-echo "\$TTL 3H" >>  /usr/local/namedb/dynamic/example.local.db
-echo "@ SOA @ nobody.localhost. 42 	1d 	 12h 	1w 	3h" >>  /usr/local/namedb/dynamic/example.local.db
-echo ";                         Serial, Refresh, Retry, Expire, Neg. cache TTL" >>  /usr/local/namedb/dynamic/example.local.db
-echo " " >>  /usr/local/namedb/dynamic/example.local.db
-echo "@	NS 	@" >>  /usr/local/namedb/dynamic/example.local.db
-echo "@	A 	127.0.0.1" >>  /usr/local/namedb/dynamic/example.local.db
+touch /usr/local/etc/namedb/dynamic/example.local.db
+echo "\$TTL 3H" >>  /usr/local/etc/namedb/dynamic/example.local.db
+echo "@ SOA @ nobody.localhost. 42 	1d 	 12h 	1w 	3h" >>  /usr/local/etc/namedb/dynamic/example.local.db
+echo ";                         Serial, Refresh, Retry, Expire, Neg. cache TTL" >>  /usr/local/etc/namedb/dynamic/example.local.db
+echo " " >>  /usr/local/etc/namedb/dynamic/example.local.db
+echo "@	NS 	@" >>  /usr/local/etc/namedb/dynamic/example.local.db
+echo "@	A 	127.0.0.1" >>  /usr/local/etc/namedb/dynamic/example.local.db
 
 # Start the service
 service named start 2 > /dev/null
