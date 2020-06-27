@@ -13,7 +13,7 @@ echo "// ZONES list" >> /usr/local/etc/namedb/zones.register
 echo "// **********" >> /usr/local/etc/namedb/zones.register
 echo "// " >> /usr/local/etc/namedb/zones.register
 echo "// sample:" >> /usr/local/etc/namedb/zones.register
-echo "// zone \"example.local\" \t{ type master; file \"/usr/local/etc/namedb/dynamic/example.local.db\"; };" >> /usr/local/etc/namedb/zones.register
+echo "// zone \"example.local\" 	{ type master; file \"/usr/local/etc/namedb/dynamic/example.local.db\"; };" >> /usr/local/etc/namedb/zones.register
 
 touch /usr/local/etc/namedb/dynamic/example.local.db
 echo "\$TTL 3H" >>  /usr/local/etc/namedb/dynamic/example.local.db
